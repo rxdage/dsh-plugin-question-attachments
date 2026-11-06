@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3 — 2026-11-06
+
+- Sharper discovery metadata: `question-attachments`, `answer-attachments` and `file-attachments` keywords/topics.
+
+
+
 ## 0.1.2 — 2026-11-06
 
 - Document installing from the DSH **Plugins → Add plugin** dialog and from the CLI (dsh plugin add github:rxdage/...).
