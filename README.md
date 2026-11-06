@@ -4,8 +4,6 @@
 
 Attach images and files **while answering an `ask_user_question` card** in [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness).
 
-![提问卡片右下角的附图按钮](docs/screenshot.png)
-
 > Status: **alpha / minimal viable build**. Tested against DSH `0.2.2-rc.1` (Desktop, Windows).
 
 ## The problem

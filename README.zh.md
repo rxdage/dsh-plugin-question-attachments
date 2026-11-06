@@ -4,8 +4,6 @@
 
 在 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 里，**回答 `ask_user_question` 提问卡片时也能发图片和文件**。
 
-![提问卡片右下角的附图按钮](docs/screenshot.png)
-
 > 状态：**alpha / 最小可用版**。在 DSH `0.2.2-rc.1`（Windows 桌面端）上验证。
 
 ## 问题

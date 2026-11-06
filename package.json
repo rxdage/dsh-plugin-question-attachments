@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-question-attachments",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Attach images/files while answering an ask_user_question card: drops, paste and picker upload the file and send it to the agent as a steering prompt.",
   "type": "module",
   "main": "lib/index.js",
