@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.4 — 2026-11-06
+
+- Fill the discovery metadata: 20 GitHub topics (at the cap) and 22 npm keywords covering
+  `question-attachments` / `answer-attachments` / `file-attachments` / `hitl` / `ai-agent` etc.
+
+
+
 ## 0.1.3 — 2026-11-06
 
 - Sharper discovery metadata: `question-attachments`, `answer-attachments` and `file-attachments` keywords/topics.
