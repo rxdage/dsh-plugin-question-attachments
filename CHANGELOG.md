@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.2 — 2026-11-06
+
+- Document installing from the DSH **Plugins → Add plugin** dialog and from the CLI (dsh plugin add github:rxdage/...).
+- Add package keywords and repository metadata so the plugin shows up under the dsh-plugin topic.
+
+
+
 ## 0.1.1 — 2026-11-06
 
 - Pin the attach button to the right end of the free-text answer field **inside

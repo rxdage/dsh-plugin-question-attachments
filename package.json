@@ -1,7 +1,20 @@
 {
   "name": "dsh-plugin-question-attachments",
-  "version": "0.1.1",
-  "description": "Attach images/files while answering an ask_user_question card: drops, paste and picker upload the file and send it to the agent as a steering prompt.",
+  "version": "0.1.2",
+  "description": "Attach images/files while answering an ask_user_question card: drop, paste or pick a file and it is sent to the agent as a steering prompt.",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "ask-user-question",
+    "attachment",
+    "image-upload"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rxdage/dsh-plugin-question-attachments.git"
+  },
+  "homepage": "https://github.com/rxdage/dsh-plugin-question-attachments#readme",
   "type": "module",
   "main": "lib/index.js",
   "exports": {

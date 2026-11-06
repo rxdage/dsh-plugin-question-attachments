@@ -35,11 +35,28 @@ No protocol change, no patched installation, fully removable.
 
 The plugin is a normal DSH bundle package with a web client half.
 
+### From the DSH UI (easiest)
+
+Sidebar → **Plugins** → **Add plugin**, paste the repository URL:
+
+```
+https://github.com/rxdage/dsh-plugin-question-attachments
+```
+
+then **Install** → **Enable now** → restart DeepSeek Harness. The dialog also accepts
+`github:rxdage/dsh-plugin-question-attachments`, a tarball URL, or a local absolute path.
+
+### From the CLI
+
+```bash
+dsh plugin --profile desktop add github:rxdage/dsh-plugin-question-attachments
+```
+
+### Manual (link a checkout)
+
 ```powershell
-# 1. get the package somewhere local
 git clone https://github.com/rxdage/dsh-plugin-question-attachments "$env:LOCALAPPDATA\dsh-plugin-question-attachments"
 
-# 2. link it into your desktop profile
 $profile = "$env:USERPROFILE\.dsh\profiles\desktop"
 New-Item -ItemType Junction -Path "$profile\node_modules\dsh-plugin-question-attachments" `
   -Target "$env:LOCALAPPDATA\dsh-plugin-question-attachments"
@@ -56,10 +73,8 @@ Then add it to `profiles/desktop/package.json`:
 }
 ```
 
-and restart DeepSeek Harness. The bundle's `cordis.patch.yml` inserts the loader row; the package's `dsh.client` declaration serves `lib/client.js` to the browser.
-
-To uninstall: remove the junction and those two entries, then restart.
-
+and restart DeepSeek Harness. To uninstall, remove the junction and those two entries (or
+use **Plugins** → the package → **Uninstall**).
 ## Usage
 
 Ask the agent something that triggers an `ask_user_question`, and while the card is shown:

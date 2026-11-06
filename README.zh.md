@@ -35,6 +35,25 @@ DSH 里的附件是 **prompt 凭证**：由 `ctx.fileUpload` 上传暂存，只�
 
 这是一个普通的 DSH bundle 包，带一个 web 客户端半边。
 
+### 在 DSH 界面里装（最省事）
+
+侧栏 → **插件** → **添加插件**，填入仓库地址：
+
+```
+https://github.com/rxdage/dsh-plugin-question-attachments
+```
+
+然后 **安装** → **立即启用** → 重启 DeepSeek Harness。对话框也接受
+`github:rxdage/dsh-plugin-question-attachments`、压缩包地址或本地绝对路径。
+
+### 用 CLI 装
+
+```bash
+dsh plugin --profile desktop add github:rxdage/dsh-plugin-question-attachments
+```
+
+### 手动（链接一份 checkout）
+
 ```powershell
 git clone https://github.com/rxdage/dsh-plugin-question-attachments "$env:LOCALAPPDATA\dsh-plugin-question-attachments"
 
@@ -54,10 +73,7 @@ New-Item -ItemType Junction -Path "$profile\node_modules\dsh-plugin-question-att
 }
 ```
 
-重启 DeepSeek Harness。包的 `cordis.patch.yml` 负责插入 loader 行，`dsh.client` 声明把 `lib/client.js` 提供给浏览器。
-
-卸载：删掉 junction 和这两处条目，再重启。
-
+重启 DeepSeek Harness。卸载：删掉 junction 和这两处条目（或在 **插件** 页里卸载）。
 ## 用法
 
 让 Agent 触发一次 `ask_user_question`，卡片出现时：
