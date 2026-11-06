@@ -5,7 +5,7 @@
 - Pin the attach button to the right end of the free-text answer field **inside
   the question card** (it follows the field's live rect while the card scrolls or
   grows); fall back to the floating pill only when no answer field is visible.
-- Show a sent-files strip above the answer row (thumbnail + name, last three, `+N`); it resets when a new card opens.
+- Show sent files as left-aligned Codex-style cards above the answer row (thumbnail, name, type; last three, then `+N`); the card grows by 50px instead of being covered, and the strip resets when a new question opens.
 - Keep paste (`Ctrl+V`) and drag-and-drop working from both placements.
 
 ## 0.1.0 — 2026-11-06
