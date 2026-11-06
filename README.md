@@ -20,11 +20,12 @@ Attachments in DSH are *prompt credentials* — they are stored by `ctx.fileUplo
 
 While the current Session has a pending interaction (the question card owns the composer):
 
-1. a small chip appears in the bottom-right corner — **📎 attach image / file**;
+1. a small **📎** button appears at the right end of the answer row, inside the card;
 2. click it, paste (`Ctrl+V`), or drop a file onto it;
 3. the file is uploaded with `ctx.fileUpload.uploadImage()` / `upload()`, producing a receipt;
 4. the receipt is sent to the agent as a **steering prompt**:
-   `session.prompt([{ type: 'file', receiptId }, { type: 'text', text }], 'steer')`.
+   `session.prompt([{ type: 'file', receiptId }, { type: 'text', text }], 'steer')`;
+5. each sent file appears as a card above the answer row (thumbnail, name, type — last three, then `+N`).
 
 During a blocking question the Session is still `running`, so the steer is accepted by the Inbox and queued. The host admits queued steers only after the current tool wait ends — i.e. **the model sees the answer and the attachment at the same step boundary**.
 
@@ -63,9 +64,9 @@ To uninstall: remove the junction and those two entries, then restart.
 
 Ask the agent something that triggers an `ask_user_question`, and while the card is shown:
 
-- click **📎 attach image / file**, or
+- click the **📎** button at the right end of the answer row, or
 - paste a screenshot from the clipboard, or
-- drag a file onto the chip.
+- drag a file onto the button.
 
 The chip reports upload progress and failures in place. The attachment arrives as a queued user message; answer the question and the agent receives both in its next step.
 

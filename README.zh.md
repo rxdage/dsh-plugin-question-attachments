@@ -20,11 +20,12 @@ DSH 里的附件是 **prompt 凭证**：由 `ctx.fileUpload` 上传暂存，只�
 
 当当前会话存在 pending 交互（提问卡片占据输入框）时：
 
-1. 右下角出现一个小按钮：**📎 附图 / 文件**；
+1. 作答输入行右端出现一个小按钮：**📎**（卡片内部）；
 2. 点选、`Ctrl+V` 粘贴、或把文件拖到按钮上；
 3. 插件调用 `ctx.fileUpload.uploadImage()` / `upload()` 上传，拿到 receipt；
 4. 以 **steering prompt** 的形式发给 Agent：
-   `session.prompt([{ type: 'file', receiptId }, { type: 'text', text }], 'steer')`。
+   `session.prompt([{ type: 'file', receiptId }, { type: 'text', text }], 'steer')`；
+5. 每个已发送文件显示为作答行上方的一张卡片（缩略图、文件名、类型，最多三张，其余 `+N`）。
 
 阻塞提问期间会话仍是 `running`，steer 会被 Inbox 收下排队；Host 只会在当前工具等待结束后准入——也就是**模型在下一步同时看到答案和附件**。
 
@@ -61,7 +62,7 @@ New-Item -ItemType Junction -Path "$profile\node_modules\dsh-plugin-question-att
 
 让 Agent 触发一次 `ask_user_question`，卡片出现时：
 
-- 点右下角 **📎 附图 / 文件**；或
+- 点作答输入行右端的 **📎** 按钮；或
 - 直接粘贴剪贴板里的截图；或
 - 把文件拖到按钮上。
 
