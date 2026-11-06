@@ -1,0 +1,8 @@
+# Bundle layer for dsh-plugin-question-attachments.
+#
+# Adds the client plugin row that renders the "attach a file while answering"
+# chip. The package itself is loaded by the profile's Loader tree; the client
+# half is served to the browser through the usual /plugins bundle route.
+- insert:
+    - id: question-attachments
+      name: 'dsh-plugin-question-attachments'
