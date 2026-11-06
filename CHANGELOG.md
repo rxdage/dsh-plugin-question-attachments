@@ -2,8 +2,9 @@
 
 ## 0.1.4 — 2026-11-06
 
-- Fill the discovery metadata: 20 GitHub topics (at the cap) and 22 npm keywords covering
-  `question-attachments` / `answer-attachments` / `file-attachments` / `hitl` / `ai-agent` etc.
+- Curated discovery metadata: seven GitHub topics and ten npm keywords, each mapping to a real
+  search intent (dsh-plugin, deepseek-harness, sk-user-question, question-attachments,
+  ile-attachments, image-upload, human-in-the-loop, plus client-plugin, i-agent, deepseek).
 
 
 
