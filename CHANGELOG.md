@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.5 — 2026-11-07
+
+- Fix: scope paste interception to the pending question card. The document-level
+  `paste` listener used to consume **every** clipboard file — including a paste into the
+  normal composer while no question was pending — upload it and send it as a steering
+  prompt; because `steer` wakes an idle Session, that paste started a turn immediately.
+- Paste is now handled only while a pending interaction exists **and** the event target
+  is inside the card's answer row. Everywhere else the plugin does nothing and DSH's own
+  paste handling applies: non-image files become `@path` chips, images join the draft,
+  and nothing is sent until you press Send.
+- The in-card 📎 button and drag-and-drop are unchanged.
+
 ## 0.1.4 — 2026-11-06
 
 - Curated discovery metadata: seven GitHub topics and ten npm keywords, each mapping to a

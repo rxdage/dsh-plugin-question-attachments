@@ -88,6 +88,7 @@ The chip reports upload progress and failures in place. The attachment arrives a
 ## Limits
 
 - Only visible while a question/approval card is pending. Once the card is hidden, `pendingInteraction` clears and the chip disappears.
+- Paste is intercepted only inside the pending card. In the normal composer the plugin stays out of the way and DSH's own paste handling applies: non-image files become `@path` chips, images join the draft, and nothing is sent until you press Send.
 - Steering during a blocked tool call is queued, not delivered immediately — by design.
 - One message per file; no drag-and-drop reordering or previews yet.
 - The desktop profile is the only profile wired up in the example; any profile with the `fileUpload` + `sessions` client services works.

@@ -87,6 +87,7 @@ New-Item -ItemType Junction -Path "$profile\node_modules\dsh-plugin-question-att
 ## 限制
 
 - 只在提问/审批卡片挂起时出现；卡片隐藏后 `pendingInteraction` 清空，按钮随之消失。
+- 只在挂起卡片内部拦截粘贴。普通输入框里插件不介入，交回 DSH 自己的粘贴处理：非图片文件变成 `@path` chip，图片进草稿附件，都不发送，按 Send 才走。
 - 工具等待期间的 steer 是排队而非立即送达——这是 Host 的既定行为。
 - 目前一次一个文件，没有拖拽排序和预览。
 - 示例只接了 desktop profile；任何带 `fileUpload` + `sessions` 客户端服务的 profile 都能用。
